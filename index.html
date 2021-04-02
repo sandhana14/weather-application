@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlVBGPNblse1Xqq9wj5evXANEmrjrnywY&libraries=&v=weekly"
+        defer></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="input">
+        <input type="text" id="city_name" placeholder="Enter the city name">
+        <button id="button_for_click">Click</button>
+        <button id="button_to_generate_users_current_position">Click here for your current location</button>
+    </div>
+
+    <div class="loading_text">
+        <span>L</span>
+        <span>O</span>
+        <span>A</span>
+        <span>D</span>
+        <span>I</span>
+        <span>N</span>
+        <span>G</span>
+    </div>
+    <h4 id="error_tag"></h4>
+    <div id="display">
+        <h1 id="city_name_to_display"></h1>
+        <p id="temperature"></p>
+        <img id="icon">
+        <p id="wind_speed"></p>
+        <p id="description"></p>
+        <p id="sunrise_sunset"></p>
+        <div id="map"></div>
+    </div>
+    <script src="weather.js"></script>
+</body>
+
+</html>
