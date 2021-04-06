@@ -118,12 +118,20 @@ function localData() {
   url = composeUrl(latitude, longitude);
   getWeatherInformation();
 }
-
-if (!localStorage.getItem("city")) {
-  localData();
-} else {
+if (localStorage.length === 0) {
+  let defaultCity = "valby";
+  url =
+    open_weather_url +
+    "weather?q=" +
+    defaultCity +
+    "&appid=" +
+    open_weather_api_key;
+  getWeatherInformation();
+} else if (localStorage.getItem("city")) {
   let city = localStorage.getItem("city");
   url =
     open_weather_url + "weather?q=" + city + "&appid=" + open_weather_api_key;
   getWeatherInformation();
+} else {
+  localData();
 }
